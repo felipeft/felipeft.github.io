@@ -1,0 +1,237 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #E0E0E0;
+    --accent-color: #00FF8C;
+    --subtle-text: #888;
+    --darker-bg: #1A1A1A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+
+
+.sidebar {
+    width: 65%; /* Mantém a largura que você gostou */
+    max-width: 700px;
+    padding: 50px 120px; /* Reduz o padding vertical para garantir que tudo caiba */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.3rem; /* Ajuste final do tamanho da fonte para que caiba */
+    color: var(--text-color);
+    margin-bottom: 0.1em;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-weight: 300;
+    color: var(--accent-color);
+    font-size: 1.05rem; /* Ajuste final da fonte para evitar quebras */
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    font-size: 0.85rem; /* Ajuste final da fonte para evitar quebras */
+    color: var(--subtle-text);
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    color: var(--subtle-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-item.active {
+    color: var(--text-color);
+}
+
+.nav-item.active::before {
+    width: 100%;
+}
+
+.contact-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    color: var(--subtle-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+}
+
+.social-link i {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: translateY(-2px);
+}
+
+.content-area {
+    flex-grow: 1;
+    padding: 60px 40px;
+    overflow-y: auto;
+}
+
+.section {
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.section h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+}
+
+#about p {
+    margin-bottom: 25px;
+}
+
+.project-card {
+    background-color: var(--darker-bg);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--subtle-text);
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.skills-list {
+    margin-top: 50px;
+}
+
+.skill-category {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-left: 2px solid var(--accent-color);
+}
+
+.skill-category h3 {
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.skill-category p {
+    color: var(--subtle-text);
+    margin-bottom: 0;
+}
+
+/* ... seu código anterior... */
+
+/* ... seu código anterior... */
+
+.orb-effect {
+    position: fixed;
+    top: -300px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    /* Aumenta a opacidade para 0.1, tornando-o mais visível */
+    background: radial-gradient(circle, rgba(0, 255, 140, 0.1) 0%, rgba(0, 255, 140, 0) 70%);
+    filter: blur(150px); /* Diminui o borrão para focar mais o efeito */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    transition: transform 0.1s ease-out;
+}
+
+/* ... o resto do seu código ... */
+
+
+
+.main-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+}
