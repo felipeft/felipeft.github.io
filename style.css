@@ -206,10 +206,6 @@ body {
     margin-bottom: 0;
 }
 
-/* ... seu código anterior... */
-
-/* ... seu código anterior... */
-
 .orb-effect {
     position: fixed;
     top: -300px;
@@ -225,13 +221,71 @@ body {
     transition: transform 0.1s ease-out;
 }
 
-/* ... o resto do seu código ... */
-
-
 
 .main-container {
     position: relative;
     z-index: 1;
     display: flex;
     width: 100%;
+}
+
+
+.project-card {
+    background-color: var(--darker-bg);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Garante que a imagem não vaze para fora das bordas arredondadas */
+    display: flex; /* Transforma o card em um flex container */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image-container {
+    width: 100%;
+    height: 200px; /* Altura da imagem de preview, ajuste se necessário */
+    background-color: #2a2a2a; /* Cor de fundo enquanto a imagem carrega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subtle-text);
+}
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--subtle-text);
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
 }
