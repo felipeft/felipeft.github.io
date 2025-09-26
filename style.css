@@ -27,14 +27,14 @@ body {
 .main-container {
     display: flex;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
-
-
 .sidebar {
-    width: 65%; /* Mantém a largura que você gostou */
+    width: 65%;
     max-width: 700px;
-    padding: 50px 120px; /* Reduz o padding vertical para garantir que tudo caiba */
+    padding: 50px 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,7 +45,7 @@ body {
 
 .sidebar h1 {
     font-family: 'Inter', sans-serif;
-    font-size: 2.3rem; /* Ajuste final do tamanho da fonte para que caiba */
+    font-size: 2.3rem;
     color: var(--text-color);
     margin-bottom: 0.1em;
     font-weight: 700;
@@ -54,12 +54,12 @@ body {
 .subtitle {
     font-weight: 300;
     color: var(--accent-color);
-    font-size: 1.05rem; /* Ajuste final da fonte para evitar quebras */
+    font-size: 1.05rem;
     margin-bottom: 20px;
 }
 
 .bio-text {
-    font-size: 0.85rem; /* Ajuste final da fonte para evitar quebras */
+    font-size: 0.85rem;
     color: var(--subtle-text);
     margin-bottom: 40px;
 }
@@ -146,6 +146,7 @@ body {
     margin-bottom: 25px;
 }
 
+/* ESTILO SIMPLIFICADO DO PROJECT CARD */
 .project-card {
     background-color: var(--darker-bg);
     padding: 30px;
@@ -212,80 +213,10 @@ body {
     left: -300px;
     width: 600px;
     height: 600px;
-    /* Aumenta a opacidade para 0.1, tornando-o mais visível */
     background: radial-gradient(circle, rgba(0, 255, 140, 0.1) 0%, rgba(0, 255, 140, 0) 70%);
-    filter: blur(150px); /* Diminui o borrão para focar mais o efeito */
+    filter: blur(150px);
     border-radius: 50%;
     pointer-events: none;
     z-index: -1;
     transition: transform 0.1s ease-out;
-}
-
-
-.main-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-}
-
-
-.project-card {
-    background-color: var(--darker-bg);
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-    overflow: hidden; /* Garante que a imagem não vaze para fora das bordas arredondadas */
-    display: flex; /* Transforma o card em um flex container */
-    flex-direction: column; /* Organiza os itens em coluna */
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-.project-image-container {
-    width: 100%;
-    height: 200px; /* Altura da imagem de preview, ajuste se necessário */
-    background-color: #2a2a2a; /* Cor de fundo enquanto a imagem carrega */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--subtle-text);
-}
-
-.project-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
-}
-
-.project-content {
-    padding: 30px;
-}
-
-.project-card h3 {
-    color: var(--accent-color);
-    font-family: 'Inter', sans-serif;
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    color: var(--subtle-text);
-    margin-bottom: 20px;
-}
-
-.project-links a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.project-links a:hover {
-    color: var(--text-color);
-    text-decoration: underline;
 }
