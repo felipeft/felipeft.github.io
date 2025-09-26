@@ -19,7 +19,7 @@
         <aside class="sidebar">
             <header>
                 <h1>Felipe Feitosa</h1>
-                <p class="subtitle">Engenheiro de Computação & Cientista de Dados</p>
+                <p class="subtitle">Engenheiro de Computação & Desenvolvedor Back-end</p>
                 <p class="bio-text">Eu transformo dados em soluções inteligentes e construo sistemas robustos e escaláveis.</p>
                 <nav class="nav-links">
                     <a href="#about" class="nav-item">Sobre Mim</a>
@@ -48,7 +48,7 @@
                 <div class="skills-list">
                     <div class="skill-category">
                         <h3>Linguagens</h3>
-                        <p>Python, SQL, C++, C</p>
+                        <p>Python, TypeScript, SQL, C++, C, Java</p>
                     </div>
                     <div class="skill-category">
                         <h3>Data Science</h3>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="skill-category">
                         <h3>Back-end</h3>
-                        <p>FastAPI, Flask, SQLAlchemy, APIs RESTful</p>
+                        <p>Node.js, Express, Prisma, FastAPI, Flask, SQLAlchemy</p>
                     </div>
                     <div class="skill-category">
                         <h3>Embarcados</h3>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="skill-category">
                         <h3>Ferramentas</h3>
-                        <p>Git, Docker, Streamlit, GitHub, Linux</p>
+                        <p>Git, Docker, Vitest, Zod, Streamlit, GitHub, Linux</p>
                     </div>
                 </div>
 
@@ -73,29 +73,78 @@
             <section id="projects" class="section">
                 <h2>Projetos</h2>
 
-                <div class="project-card github-project" data-repo-url="https://github.com/felipeft/Brazillian_e-commerce">
-                    <div class="project-image-container">
-                        </div>
-                    <div class="project-content">
-                        <h3>Analisador de Vendas da Olist</h3>
-                        <p>Este projeto de Machine Learning analisa dados de e-commerce para prever atrasos em entregas. O pipeline completo de desenvolvimento inclui engenharia de features, experimentação com modelos (Random Forest), tratamento de dados desbalanceados com SMOTE e uma aplicação interativa com Streamlit.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/felipeft/Brazillian_e-commerce" target="_blank">Repositório GitHub</a>
-                        </div>
+                <div class="project-card">
+                    <h3>Analisador de Vendas da Olist</h3>
+                    <p>Este projeto de Machine Learning analisa dados de e-commerce para prever atrasos em entregas. O pipeline completo de desenvolvimento inclui engenharia de features, experimentação com modelos (Random Forest), tratamento de dados desbalanceados com SMOTE e uma aplicação interativa com Streamlit.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/Brazillian_e-commerce" target="_blank">Repositório GitHub</a>
                     </div>
                 </div>
 
-                <div class="project-card github-project" data-repo-url="https://github.com/felipeft/FastAPI-auth-API">
-                    <div class="project-image-container">
-                        </div>
-                    <div class="project-content">
-                        <h3>FastAPI Auth API</h3>
-                        <p>Uma API REST para cadastro e autenticação de usuários, construída com FastAPI. Implementa um sistema seguro com hash de senhas (bcrypt) e autenticação baseada em tokens JWT, servindo como uma base robusta para qualquer aplicação que necessite de gerenciamento de usuários.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/felipeft/FastAPI-auth-API" target="_blank">Repositório GitHub</a>
-                        </div>
+                <div class="project-card">
+                    <h3>API de Mini E-commerce</h3>
+                    <p>Uma API REST completa para um sistema de e-commerce, construída com Node.js, TypeScript e Prisma. Implementa um fluxo completo com produtos, carrinho e checkout com transações, além de validação de dados com Zod e uma suíte de testes de integração com Vitest.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/mini-ecommerce" target="_blank">Repositório GitHub</a>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <h3>FastAPI Auth API</h3>
+                    <p>Uma API REST para cadastro e autenticação de usuários, construída com FastAPI. Implementa um sistema seguro com hash de senhas (bcrypt) e autenticação baseada em tokens JWT, servindo como uma base robusta para qualquer aplicação que necessite de gerenciamento de usuários.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/FastAPI-auth-API" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Predição de Preços de Carros com Machine Learning</h3>
+                    <p>Projeto de Machine Learning para prever o valor de carros usados. Envolveu exploração de dados, engenharia de features e o treinamento e avaliação comparativa de 5 modelos de regressão (como Random Forest e Gradient Boosting) com scikit-learn.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/Car-Price-Prediction" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>SafeDriver (Robótica e Sistemas Embarcados)</h3>
+                    <p>Carrinho robótico 4WD controlado por uma ESP32. O projeto integra sensores ultrassônicos para navegação autônoma e possui um modo de controle manual via interface web hospedada no próprio microcontrolador, utilizando C++ e PlatformIO.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/SafeDriver-PlatformIO" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>SGP</h3>
+                    <p>Sistema distribuído de gerenciamento de produtos com cliente em Python e servidor em Java. A comunicação é realizada via sockets UDP, incluindo mecanismos para tratamento de falhas e retransmissão de mensagens.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/SGP---Sistema-de-Gerenciamento-de-Produtos" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Driver para DS18B20</h3>
+                    <p>Desenvolvimento de uma biblioteca em C para leitura do sensor de temperatura DS18B20 em bare metal (sem sistema operacional) no microcontrolador STM32F103C8T6, com manipulação direta de registradores.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/DS18B20-STM32-Baremetal" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>RenewRecycle</h3>
+                    <p>Aplicativo de reciclagem inteligente desenvolvido em Java para Android. Inclui CRUDs para usuários e cooperativas, com integração com Firebase para backend e a API do Google Maps para geolocalização.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/RenewRecycle" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Solucionador do Problema de Fourier</h3>
+                    <p>Implementação de um algoritmo em C++ para resolver e plotar graficamente perfis de temperatura em uma barra de metal, aplicando a equação diferencial parcial de Fourier, como parte de um trabalho de Equações Diferenciais.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/felipeft/Problema-de-Fourier" target="_blank">Repositório GitHub</a>
+                    </div>
+                </div>
+
 
             </section>
 
