@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe - Portfólio</title>
+    <title>Felipe Feitosa - Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,145 +11,119 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    
     <div class="orb-effect"></div>
-    
-    <div class="main-container">
-        
-        <aside class="sidebar">
-            <header>
-                <h1>Felipe Feitosa</h1>
-                <p class="subtitle">Engenheiro de Computação & Desenvolvedor Back-end</p>
-                <p class="bio-text">Eu transformo dados em soluções inteligentes e construo sistemas robustos e escaláveis.</p>
-                <nav class="nav-links">
-                    <a href="#about" class="nav-item">Sobre Mim</a>
-                    <a href="#projects" class="nav-item">Projetos</a>
-                </nav>
-            </header>
-            
-            <footer class="contact-links">
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="Logo de Felipe Feitosa">
+                </a>
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio" class="nav-item">Início</a></li>
+                    <li><a href="#especialidades" class="nav-item">Especialidades</a></li>
+                    <li><a href="#sobre" class="nav-item">Sobre</a></li>
+                    <li><a href="#projetos" class="nav-item">Projetos</a></li>
+                </ul>
+            </nav>
+            <div class="contact-links">
                 <a href="https://github.com/felipeft" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/felipe-feitosa-teixeira-7894a020a/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/felipe-ft/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.kaggle.com/felipeft" target="_blank" class="social-link"><i class="fa-brands fa-kaggle"></i></a>
-            </footer>
-        </aside>
+                <a href="mailto:felipeflw11@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
 
-        <main class="content-area">
-            
-            <section id="about" class="section">
-                <h2>Sobre Mim</h2>
-                
-                <p>Sou um estudante de Engenharia de Computação da Universidade Federal do Ceará (UFC), com uma sólida base técnica e um interesse especial em <strong>Data Science</strong> e <strong>desenvolvimento Back-end</strong>. Minha trajetória acadêmica e profissional tem sido impulsionada por experiências práticas em startups e em projetos universitários, que me capacitaram a transitar com fluidez entre a engenharia de software e a análise de dados. Essa versatilidade me permite não só idealizar, mas também construir soluções completas e robustas, da infraestrutura de back-end à inteligência de dados que move o sistema.</p>
-                
-                <p>Atualmente, sou bolsista e líder técnico no projeto de extensão <strong>Walk-E</strong>, uma iniciativa inovadora focada no desenvolvimento de um piso gerador de energia limpa a partir dos passos humanos. Neste projeto, que se localiza no sertão central do Ceará, aplico meus conhecimentos em <strong>sistemas embarcados</strong> e <strong>engenharia de dados</strong> para enfrentar desafios complexos e contribuir para a geração de energia sustentável. A experiência de unir Data Science com a engenharia mecatrônica e de sistemas embarcados reforçou minha visão sobre o potencial da tecnologia para resolver problemas do mundo real.</p>
-                
-                <p>Com uma forte paixão por desafios e um compromisso com o aprendizado contínuo, busco uma oportunidade para aplicar minhas habilidades técnicas e pensamento sistêmico. Meu objetivo é fazer parte de uma equipe inovadora, onde eu possa não apenas crescer profissionalmente, mas também fazer uma contribuição significativa.</p>
+    <main>
+        <section id="inicio" class="section hero">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-hero">
+                        <h1>Engenheiro de Computação & Desenvolvedor <span>Back-end.</span></h1>
+                        <p>Eu transformo dados em soluções inteligentes e construo sistemas robustos e escaláveis, unindo a engenharia de software com a ciência de dados.</p>
+                    </div>
+                    <div class="img-hero">
+                        <img src="img/foto-perfil.jpg" alt="Foto de Felipe Feitosa, Engenheiro de Computação">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="skills-list">
-                    <div class="skill-category">
-                        <h3>Linguagens</h3>
-                        <p>Python, TypeScript, SQL, C++, C, Java</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Data Science</h3>
-                        <p>Pandas, NumPy, Scikit-learn, Imbalanced-learn</p>
-                    </div>
-                    <div class="skill-category">
+        <section id="especialidades" class="section">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="fa-solid fa-server"></i>
                         <h3>Back-end</h3>
                         <p>Node.js, Express, Prisma, FastAPI, Flask, SQLAlchemy</p>
                     </div>
-                    <div class="skill-category">
-                        <h3>Embarcados</h3>
-                        <p>Microcontroladores, Sistemas IoT, STM32, ESP32, BeagleBoneBoard, Raspberry Pi</p>
+                    <div class="especialidades-box">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Data Science</h3>
+                        <p>Pandas, NumPy, Scikit-learn, Imbalanced-learn</p>
                     </div>
-                    <div class="skill-category">
-                        <h3>Ferramentas</h3>
-                        <p>Git, Docker, Vitest, Zod, Streamlit, GitHub, Linux</p>
-                    </div>
-                </div>
-
-            </section>
-
-            <section id="projects" class="section">
-                <h2>Projetos</h2>
-
-                <div class="project-card">
-                    <h3>Analisador de Vendas da Olist</h3>
-                    <p>Este projeto de Machine Learning analisa dados de e-commerce para prever atrasos em entregas. O pipeline completo de desenvolvimento inclui engenharia de features, experimentação com modelos (Random Forest), tratamento de dados desbalanceados com SMOTE e uma aplicação interativa com Streamlit.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/Brazillian_e-commerce" target="_blank">Repositório GitHub</a>
+                    <div class="especialidades-box">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>Sistemas Embarcados</h3>
+                        <p>C/C++, STM32, ESP32, Raspberry Pi, IoT</p>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>API de Mini E-commerce</h3>
-                    <p>Uma API REST completa para um sistema de e-commerce, construída com Node.js, TypeScript e Prisma. Implementa um fluxo completo com produtos, carrinho e checkout com transações, além de validação de dados com Zod e uma suíte de testes de integração com Vitest.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/mini-ecommerce" target="_blank">Repositório GitHub</a>
+            </div>
+        </section>
+        
+        <section id="sobre" class="section">
+             <div class="interface">
+                <h2 class="titulo">SOBRE <span>MIM.</span></h2>
+                <div class="flex">
+                    <div class="txt-sobre">
+                        <p>Sou um estudante de Engenharia de Computação da Universidade Federal do Ceará (UFC), com uma sólida base técnica e um interesse especial em <strong>Data Science</strong> e <strong>desenvolvimento Back-end</strong>. Minha trajetória tem sido impulsionada por experiências práticas que me capacitaram a transitar com fluidez entre a engenharia de software e a análise de dados.</p>
+                        <p>Atualmente, sou bolsista e líder técnico no projeto de extensão <strong>Walk-E</strong>, uma iniciativa inovadora focada no desenvolvimento de um piso gerador de energia limpa. Neste projeto, aplico meus conhecimentos em <strong>sistemas embarcados</strong> e <strong>engenharia de dados</strong> para enfrentar desafios complexos e contribuir para a geração de energia sustentável.</p>
+                        <p>Com uma forte paixão por desafios e um compromisso com o aprendizado contínuo, busco fazer parte de uma equipe inovadora, onde eu possa não apenas crescer profissionalmente, mas também fazer uma contribuição significativa.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <h3>FastAPI Auth API</h3>
-                    <p>Uma API REST para cadastro e autenticação de usuários, construída com FastAPI. Implementa um sistema seguro com hash de senhas (bcrypt) e autenticação baseada em tokens JWT, servindo como uma base robusta para qualquer aplicação que necessite de gerenciamento de usuários.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/FastAPI-auth-API" target="_blank">Repositório GitHub</a>
+        <section id="projetos" class="section">
+            <div class="interface">
+                <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
+                <div class="flex">
+                    <div class="project-card">
+                        <h3>Analisador de Vendas da Olist</h3>
+                        <p>Projeto de Machine Learning que analisa dados de e-commerce para prever atrasos em entregas, incluindo engenharia de features, tratamento de dados desbalanceados e uma aplicação interativa com Streamlit.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/felipeft/Brazillian_e-commerce" target="_blank">Repositório GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>API de Mini E-commerce</h3>
+                        <p>API REST completa para e-commerce construída com Node.js, TypeScript e Prisma, implementando fluxo completo com transações, validação de dados com Zod e testes de integração com Vitest.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/felipeft/mini-ecommerce" target="_blank">Repositório GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>FastAPI Auth API</h3>
+                        <p>API REST para cadastro e autenticação de usuários com FastAPI, utilizando hash de senhas (bcrypt) e autenticação baseada em tokens JWT.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/felipeft/FastAPI-auth-API" target="_blank">Repositório GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Predição de Preços de Carros</h3>
+                        <p>Projeto de Machine Learning para prever o valor de carros usados, com treinamento e avaliação comparativa de 5 modelos de regressão (como Random Forest e Gradient Boosting).</p>
+                        <div class="project-links">
+                            <a href="https://github.com/felipeft/Car-Price-Prediction" target="_blank">Repositório GitHub</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>Predição de Preços de Carros com Machine Learning</h3>
-                    <p>Projeto de Machine Learning para prever o valor de carros usados. Envolveu exploração de dados, engenharia de features e o treinamento e avaliação comparativa de 5 modelos de regressão (como Random Forest e Gradient Boosting) com scikit-learn.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/Car-Price-Prediction" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>SafeDriver (Robótica e Sistemas Embarcados)</h3>
-                    <p>Carrinho robótico 4WD controlado por uma ESP32. O projeto integra sensores ultrassônicos para navegação autônoma e possui um modo de controle manual via interface web hospedada no próprio microcontrolador, utilizando C++ e PlatformIO.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/SafeDriver-PlatformIO" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>SGP</h3>
-                    <p>Sistema distribuído de gerenciamento de produtos com cliente em Python e servidor em Java. A comunicação é realizada via sockets UDP, incluindo mecanismos para tratamento de falhas e retransmissão de mensagens.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/SGP---Sistema-de-Gerenciamento-de-Produtos" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Driver para DS18B20</h3>
-                    <p>Desenvolvimento de uma biblioteca em C para leitura do sensor de temperatura DS18B20 em bare metal (sem sistema operacional) no microcontrolador STM32F103C8T6, com manipulação direta de registradores.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/DS18B20-STM32-Baremetal" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>RenewRecycle</h3>
-                    <p>Aplicativo de reciclagem inteligente desenvolvido em Java para Android. Inclui CRUDs para usuários e cooperativas, com integração com Firebase para backend e a API do Google Maps para geolocalização.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/RenewRecycle" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Solucionador do Problema de Fourier</h3>
-                    <p>Implementação de um algoritmo em C++ para resolver e plotar graficamente perfis de temperatura em uma barra de metal, aplicando a equação diferencial parcial de Fourier, como parte de um trabalho de Equações Diferenciais.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/felipeft/Problema-de-Fourier" target="_blank">Repositório GitHub</a>
-                    </div>
-                </div>
-
-
-            </section>
-
-        </main>
-    </div>
+            </div>
+        </section>
+    </main>
 
     <script src="js/cursor.js"></script>
     <script src="script.js"></script>
