@@ -1,4 +1,4 @@
-/* ESTILO GERAL E VARIÁVEIS (Mantido do seu original) */
+/* ESTILO GERAL E VARIÁVEIS */
 :root {
     --bg-color: #121212;
     --text-color: #E0E0E0;
@@ -21,11 +21,13 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    line-height: 1.6; /* Adicionado para melhor legibilidade */
 }
 
 .interface {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 4%; /* Adicionado padding lateral padrão */
 }
 
 .flex {
@@ -42,7 +44,7 @@ h2.titulo span {
     color: var(--accent-color);
 }
 
-/* EFEITO ORB (Mantido do seu original) */
+/* EFEITO ORB */
 .orb-effect {
     position: fixed;
     top: -300px;
@@ -59,7 +61,7 @@ h2.titulo span {
 
 /* CABEÇALHO E NAVEGAÇÃO */
 header {
-    padding: 20px 4%;
+    padding: 20px 0; /* Removido padding lateral, pois já está no .interface */
     position: sticky;
     top: 0;
     left: 0;
@@ -75,9 +77,9 @@ header > .interface {
     justify-content: space-between;
 }
 
-header .logo h1 {
-    color: var(--text-color);
-    font-size: 1.8rem;
+header .logo img {
+    height: 40px;
+    width: auto;
 }
 
 header nav.menu-desktop ul {
@@ -120,6 +122,7 @@ header nav.menu-desktop ul li {
 .contact-links {
     display: flex;
     gap: 15px;
+    align-items: center; /* Alinha verticalmente os ícones */
 }
 
 .social-link i {
@@ -135,12 +138,12 @@ header nav.menu-desktop ul li {
 
 /* SEÇÕES GERAIS */
 .section {
-    padding: 120px 4%;
+    padding: 100px 4%; /* Reduzido padding vertical levemente */
 }
 
 /* ESTILO DO HERO */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* Ajusta altura considerando o header */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,11 +151,11 @@ header nav.menu-desktop ul li {
 
 .hero .flex {
     align-items: center;
-    gap: 90px;
+    gap: 60px; /* Reduzido o gap */
 }
 
 .txt-hero h1 {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Levemente reduzido */
     line-height: 1.2;
 }
 
@@ -161,35 +164,38 @@ header nav.menu-desktop ul li {
 }
 
 .txt-hero p {
-    margin: 40px 0;
+    margin: 30px 0; /* Reduzido margin */
     color: var(--subtle-text);
     font-size: 1.1rem;
+    max-width: 600px; /* Limita largura do texto */
 }
 
 .img-hero img {
-    width: 400px;
+    width: 350px; /* Reduzido tamanho da imagem */
     border-radius: 50%;
     animation: flutuar 3s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+    100% { transform: translateY(-15px); } /* Reduzida a flutuação */
 }
 
 /* ESTILO ESPECIALIDADES */
 #especialidades .flex {
-    gap: 60px;
+    gap: 40px; /* Reduzido gap */
     justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
 }
 
 .especialidades-box {
-    padding: 40px;
+    padding: 30px; /* Reduzido padding */
     border: 2px solid #333;
     border-radius: 20px;
     text-align: center;
     transition: transform 0.2s, border-color 0.2s;
-    flex: 1;
+    flex: 1 1 300px; /* Base flexível, mínimo 300px */
+    max-width: 350px; /* Limita largura máxima */
 }
 
 .especialidades-box:hover {
@@ -198,35 +204,40 @@ header nav.menu-desktop ul li {
 }
 
 .especialidades-box i {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Reduzido tamanho do ícone */
     color: var(--accent-color);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .especialidades-box h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem; /* Reduzido */
+    margin-bottom: 10px;
 }
 
 .especialidades-box p {
     color: var(--subtle-text);
+    font-size: 0.95rem; /* Levemente reduzido */
 }
 
 /* ESTILO SOBRE */
 #sobre {
     text-align: center;
 }
+#sobre .flex { /* Garante que o flex se aplique corretamente */
+    justify-content: center;
+}
 
 .txt-sobre {
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .txt-sobre p {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Aumentado margin bottom */
     line-height: 1.7;
     color: var(--subtle-text);
     font-size: 1.1rem;
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
 }
 
 .txt-sobre p strong {
@@ -234,7 +245,7 @@ header nav.menu-desktop ul li {
     font-weight: 500;
 }
 
-/* ESTILO PROJETOS (Mantido e adaptado) */
+/* ESTILO PROJETOS */
 #projetos .flex {
     justify-content: center;
     flex-wrap: wrap;
@@ -246,8 +257,10 @@ header nav.menu-desktop ul li {
     padding: 30px;
     border-radius: 15px;
     transition: transform 0.3s ease;
-    flex-basis: calc(50% - 20px); /* Dois por linha */
+    flex-basis: calc(50% - 20px); /* Dois por linha, considera o gap */
     max-width: 550px;
+    display: flex; /* Adicionado para controle interno */
+    flex-direction: column; /* Organiza conteúdo verticalmente */
 }
 
 .project-card:hover {
@@ -263,6 +276,11 @@ header nav.menu-desktop ul li {
 .project-card p {
     color: var(--subtle-text);
     margin-bottom: 25px;
+    flex-grow: 1; /* Faz o parágrafo ocupar espaço disponível */
+}
+
+.project-links {
+    margin-top: auto; /* Empurra o link para o final do card */
 }
 
 .project-links a {
@@ -277,19 +295,111 @@ header nav.menu-desktop ul li {
     text-decoration: underline;
 }
 
-/* RESPONSIVIDADE */
+/* --- RESPONSIVIDADE --- */
+
+/* Telas Médias (Tablets e Laptops Pequenos) */
 @media screen and (max-width: 1024px) {
-    .flex {
-        flex-direction: column;
-    }
-    .hero .flex {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .project-card {
-        flex-basis: 100%;
+    .interface {
+        padding: 0 5%; /* Aumenta padding lateral */
     }
     header nav.menu-desktop {
-        display: none; /* Simplificando para mobile, pode ser adicionado um menu hamburguer depois */
+        display: none; /* Esconde menu desktop */
+    }
+    .hero .flex {
+        flex-direction: column-reverse; /* Inverte ordem no mobile */
+        gap: 40px;
+        text-align: center;
+    }
+    .txt-hero h1 {
+        font-size: 2.5rem; /* Reduz fonte */
+    }
+    .img-hero img {
+        width: 300px; /* Reduz imagem */
+    }
+    #especialidades .flex {
+        gap: 30px;
+    }
+    .especialidades-box {
+        flex-basis: calc(50% - 15px); /* Dois por linha */
+        max-width: none;
+    }
+    #sobre .flex {
+        flex-direction: column; /* Garante coluna */
+    }
+    .txt-sobre p {
+        text-align: center; /* Centraliza texto no sobre */
+    }
+    #projetos .flex {
+        gap: 30px;
+    }
+    .project-card {
+        flex-basis: calc(50% - 15px); /* Dois por linha */
+        max-width: none;
+    }
+}
+
+/* Telas Pequenas (Tablets Verticais e Celulares Grandes) */
+@media screen and (max-width: 768px) {
+    h2.titulo {
+        font-size: 2rem; /* Reduz fonte dos títulos */
+        margin-bottom: 40px;
+    }
+    .section {
+        padding: 80px 4%;
+    }
+    .hero {
+        min-height: auto; /* Remove altura mínima */
+        padding: 80px 4% 40px 4%; /* Ajusta padding */
+    }
+    .txt-hero h1 {
+        font-size: 2.2rem;
+    }
+    .txt-hero p {
+        font-size: 1rem;
+    }
+    .img-hero img {
+        width: 250px;
+    }
+    .especialidades-box {
+        flex-basis: 100%; /* Um por linha */
+        padding: 25px;
+    }
+    .especialidades-box i {
+        font-size: 3rem;
+    }
+    .especialidades-box h3 {
+        font-size: 1.5rem;
+    }
+    .txt-sobre p {
+        font-size: 1rem;
+    }
+    .project-card {
+        flex-basis: 100%; /* Um por linha */
+        padding: 25px;
+    }
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Telas Muito Pequenas (Celulares) */
+@media screen and (max-width: 480px) {
+    .interface {
+        padding: 0 6%;
+    }
+    header .logo img {
+        height: 30px; /* Reduz logo */
+    }
+    .social-link i {
+        font-size: 1.4rem; /* Reduz ícones sociais */
+    }
+    .contact-links {
+        gap: 10px;
+    }
+    .txt-hero h1 {
+        font-size: 1.8rem;
+    }
+    .img-hero img {
+        width: 200px;
     }
 }
