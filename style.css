@@ -1,10 +1,12 @@
-/* ESTILO GERAL E VARIÁVEIS */
 :root {
     --bg-color: #121212;
-    --text-color: #E0E0E0;
+    --text-color: #e0e0e0;
     --accent-color: #00ff8c;
+    --accent-soft: #00ffae;
     --subtle-text: #888;
-    --darker-bg: #1A1A1A;
+    --subtle-text-2: #9ca3af;
+    --border-color: #333;
+    --card-bg: #1a1a1a;
 }
 
 * {
@@ -21,13 +23,13 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6; /* Adicionado para melhor legibilidade */
+    line-height: 1.6;
 }
 
 .interface {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 4%; /* Adicionado padding lateral padrão */
+    padding: 0 4%;
 }
 
 .flex {
@@ -36,7 +38,7 @@ body {
 
 h2.titulo {
     font-size: 2.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
     text-align: center;
 }
 
@@ -44,7 +46,7 @@ h2.titulo span {
     color: var(--accent-color);
 }
 
-/* EFEITO ORB */
+/* EFEITO DE FUNDO */
 .orb-effect {
     position: fixed;
     top: -300px;
@@ -59,13 +61,13 @@ h2.titulo span {
     transition: transform 0.1s ease-out;
 }
 
-/* CABEÇALHO E NAVEGAÇÃO */
+/* HEADER */
 header {
-    padding: 20px 0; /* Removido padding lateral, pois já está no .interface */
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    padding: 20px 0;
     background-color: rgba(18, 18, 18, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -80,10 +82,11 @@ header > .interface {
 header .logo img {
     height: 40px;
     width: auto;
+    display: block;
 }
 
 header nav.menu-desktop ul {
-    list-style-type: none;
+    list-style: none;
 }
 
 header nav.menu-desktop ul li {
@@ -92,37 +95,39 @@ header nav.menu-desktop ul li {
 }
 
 .nav-item {
+    position: relative;
     color: var(--subtle-text);
     text-decoration: none;
     font-size: 1.1rem;
-    position: relative;
     transition: color 0.3s ease;
 }
 
 .nav-item::after {
-    content: '';
+    content: "";
     position: absolute;
+    left: 50%;
+    bottom: -5px;
     width: 0;
     height: 2px;
     background: var(--accent-color);
-    bottom: -5px;
-    left: 50%;
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
     color: var(--text-color);
 }
 
-.nav-item:hover::after, .nav-item.active::after {
+.nav-item:hover::after,
+.nav-item.active::after {
     width: 100%;
 }
 
 .contact-links {
     display: flex;
+    align-items: center;
     gap: 15px;
-    align-items: center; /* Alinha verticalmente os ícones */
 }
 
 .social-link i {
@@ -136,18 +141,20 @@ header nav.menu-desktop ul li {
     transform: translateY(-2px);
 }
 
-/* SEÇÕES GERAIS */
+/* SEÇÕES */
 .section {
-    padding: 100px 4%; /* Reduzido padding vertical levemente */
+    padding: 100px 4%;
 }
 
 .section-subtitle {
-    font-size: 0.95rem;
-    color: #9ca3af; /* cinza suave (tailwind gray-400) */
-    margin: 10px 0 30px 0;
     max-width: 600px;
-    line-height: 1.5;
-    opacity: 0.9;
+    margin: 8px 0 32px 0;
+    padding-left: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--subtle-text-2);
+    border-left: 2px solid var(--accent-color);
+    opacity: 0.95;
 }
 
 .section-divider {
@@ -162,9 +169,9 @@ header nav.menu-desktop ul li {
     );
 }
 
-/* ESTILO DO HERO */
+/* HERO */
 .hero {
-    min-height: calc(100vh - 80px); /* Ajusta altura considerando o header */
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,11 +179,11 @@ header nav.menu-desktop ul li {
 
 .hero .flex {
     align-items: center;
-    gap: 60px; /* Reduzido o gap */
+    gap: 60px;
 }
 
 .txt-hero h1 {
-    font-size: 2.8rem; /* Levemente reduzido */
+    font-size: 2.8rem;
     line-height: 1.2;
 }
 
@@ -185,38 +192,43 @@ header nav.menu-desktop ul li {
 }
 
 .txt-hero p {
-    margin: 30px 0; /* Reduzido margin */
-    color: var(--subtle-text);
+    margin: 30px 0;
+    max-width: 600px;
     font-size: 1.1rem;
-    max-width: 600px; /* Limita largura do texto */
+    color: var(--subtle-text);
 }
 
 .img-hero img {
-    width: 350px; /* Reduzido tamanho da imagem */
+    width: 350px;
     border-radius: 50%;
+    display: block;
     animation: flutuar 3s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-15px); } /* Reduzida a flutuação */
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
 }
 
-/* ESTILO ESPECIALIDADES */
+/* ESPECIALIDADES */
 #especialidades .flex {
-    gap: 40px; /* Reduzido gap */
     justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .especialidades-box {
-    padding: 30px; /* Reduzido padding */
-    border: 2px solid #333;
-    border-radius: 20px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 30px;
     text-align: center;
-    transition: transform 0.2s, border-color 0.2s;
-    flex: 1 1 300px; /* Base flexível, mínimo 300px */
-    max-width: 350px; /* Limita largura máxima */
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .especialidades-box:hover {
@@ -225,26 +237,27 @@ header nav.menu-desktop ul li {
 }
 
 .especialidades-box i {
-    font-size: 3.5rem; /* Reduzido tamanho do ícone */
-    color: var(--accent-color);
     margin-bottom: 20px;
+    font-size: 3.5rem;
+    color: var(--accent-color);
 }
 
 .especialidades-box h3 {
-    font-size: 1.6rem; /* Reduzido */
     margin-bottom: 10px;
+    font-size: 1.6rem;
 }
 
 .especialidades-box p {
+    font-size: 0.95rem;
     color: var(--subtle-text);
-    font-size: 0.95rem; /* Levemente reduzido */
 }
 
-/* ESTILO SOBRE */
+/* SOBRE */
 #sobre {
     text-align: center;
 }
-#sobre .flex { /* Garante que o flex se aplique corretamente */
+
+#sobre .flex {
     justify-content: center;
 }
 
@@ -254,11 +267,11 @@ header nav.menu-desktop ul li {
 }
 
 .txt-sobre p {
-    margin-bottom: 25px; /* Aumentado margin bottom */
-    line-height: 1.7;
-    color: var(--subtle-text);
+    margin-bottom: 25px;
     font-size: 1.1rem;
-    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+    line-height: 1.7;
+    text-align: left;
+    color: var(--subtle-text);
 }
 
 .txt-sobre p strong {
@@ -266,7 +279,7 @@ header nav.menu-desktop ul li {
     font-weight: 500;
 }
 
-/* ESTILO PROJETOS */
+/* PROJETOS */
 #projetos .flex {
     justify-content: center;
     flex-wrap: wrap;
@@ -274,14 +287,54 @@ header nav.menu-desktop ul li {
 }
 
 .project-card {
-    background-color: var(--darker-bg);
-    padding: 30px;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    flex-basis: calc(50% - 20px); /* Dois por linha, considera o gap */
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 20px);
     max-width: 550px;
-    display: flex; /* Adicionado para controle interno */
-    flex-direction: column; /* Organiza conteúdo verticalmente */
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+}
+
+.project-description,
+.project-card p {
+    margin-bottom: 22px;
+    color: var(--subtle-text);
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 0;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.project-tags span {
+    position: relative;
+    white-space: nowrap;
+}
+
+.project-tags span:not(:last-child)::after {
+    content: " ● ";
+    color: var(--accent-soft);
+    margin: 0 6px;
 }
 
 .project-tech {
@@ -293,59 +346,26 @@ header nav.menu-desktop ul li {
 .project-tech li {
     position: relative;
     padding-left: 18px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    color: var(--text-color);
 }
 
-/* bolinha personalizada */
 .project-tech li::before {
-    content: "º";
+    content: "●";
     position: absolute;
     left: 0;
-    color: #00ffae;
-    font-weight: bold;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.project-tags span {
-    background: rgba(0, 255, 174, 0.1);
-    border: 1px solid rgba(0, 255, 174, 0.3);
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    color: #00ffae;
-}
-
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-card h3 {
-    color: var(--accent-color);
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.project-card p {
-    color: var(--subtle-text);
-    margin-bottom: 25px;
-    flex-grow: 1; /* Faz o parágrafo ocupar espaço disponível */
+    color: var(--accent-soft);
+    font-weight: 700;
 }
 
 .project-links {
-    margin-top: auto; /* Empurra o link para o final do card */
+    margin-top: auto;
 }
 
 .project-links a {
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
@@ -354,149 +374,172 @@ header nav.menu-desktop ul li {
     text-decoration: underline;
 }
 
-/* --- RESPONSIVIDADE --- */
-
-/* Telas Médias (Tablets e Laptops Pequenos) */
-@media screen and (max-width: 1024px) {
-    .interface {
-        padding: 0 5%; /* Aumenta padding lateral */
-    }
-    header nav.menu-desktop {
-        display: none; /* Esconde menu desktop */
-    }
-    .hero .flex {
-        flex-direction: column-reverse; /* Inverte ordem no mobile */
-        gap: 40px;
-        text-align: center;
-    }
-    .txt-hero h1 {
-        font-size: 2.5rem; /* Reduz fonte */
-    }
-    .img-hero img {
-        width: 300px; /* Reduz imagem */
-    }
-    #especialidades .flex {
-        gap: 30px;
-    }
-    .especialidades-box {
-        flex-basis: calc(50% - 15px); /* Dois por linha */
-        max-width: none;
-    }
-    #sobre .flex {
-        flex-direction: column; /* Garante coluna */
-    }
-    .txt-sobre p {
-        text-align: center; /* Centraliza texto no sobre */
-    }
-    #projetos .flex {
-        gap: 30px;
-    }
-    .project-card {
-        flex-basis: calc(50% - 15px); /* Dois por linha */
-        max-width: none;
-    }
-}
-
-/* Telas Pequenas (Tablets Verticais e Celulares Grandes) */
-@media screen and (max-width: 768px) {
-    h2.titulo {
-        font-size: 2rem; /* Reduz fonte dos títulos */
-        margin-bottom: 40px;
-    }
-    .section {
-        padding: 80px 4%;
-    }
-    .hero {
-        min-height: auto; /* Remove altura mínima */
-        padding: 80px 4% 40px 4%; /* Ajusta padding */
-    }
-    .txt-hero h1 {
-        font-size: 2.2rem;
-    }
-    .txt-hero p {
-        font-size: 1rem;
-    }
-    .img-hero img {
-        width: 250px;
-    }
-    .especialidades-box {
-        flex-basis: 100%; /* Um por linha */
-        padding: 25px;
-    }
-    .especialidades-box i {
-        font-size: 3rem;
-    }
-    .especialidades-box h3 {
-        font-size: 1.5rem;
-    }
-    .txt-sobre p {
-        font-size: 1rem;
-    }
-    .project-card {
-        flex-basis: 100%; /* Um por linha */
-        padding: 25px;
-    }
-    .project-card h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Telas Muito Pequenas (Celulares) */
-@media screen and (max-width: 480px) {
-    .interface {
-        padding: 0 6%;
-    }
-    header .logo img {
-        height: 30px; /* Reduz logo */
-    }
-    .social-link i {
-        font-size: 1.4rem; /* Reduz ícones sociais */
-    }
-    .contact-links {
-        gap: 10px;
-    }
-    .txt-hero h1 {
-        font-size: 1.8rem;
-    }
-    .img-hero img {
-        width: 200px;
-    }
-}
-
-
-
-/* Botão */
+/* BOTÃO EXPANDIR */
 .expand-btn {
-    margin-top: 15px;
-    background: transparent;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    padding: 0;
     border: none;
-    color: #00ffae;
-    font-weight: 500;
+    background: transparent;
+    color: var(--accent-soft);
+    font-weight: 600;
+    font-size: 0.95rem;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 .expand-btn:hover {
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
-/* Ícone rotaciona */
 .expand-btn i {
     transition: transform 0.3s ease;
 }
 
-/* Conteúdo oculto */
+/* CONTEÚDO EXPANSÍVEL */
 .project-details {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
 
-/* Quando ativo */
 .project-card.active .project-details {
-    max-height: 500px; /* suficiente pra lista */
+    max-height: 700px;
 }
 
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1024px) {
+    .interface {
+        padding: 0 5%;
+    }
+
+    header nav.menu-desktop {
+        display: none;
+    }
+
+    .hero .flex {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .txt-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .img-hero img {
+        width: 300px;
+    }
+
+    #especialidades .flex,
+    #projetos .flex {
+        gap: 30px;
+    }
+
+    .especialidades-box,
+    .project-card {
+        flex-basis: calc(50% - 15px);
+        max-width: none;
+    }
+
+    .txt-sobre p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2.titulo {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .section {
+        padding: 80px 4%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 4% 40px 4%;
+    }
+
+    .txt-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .txt-hero p,
+    .txt-sobre p,
+    .project-description,
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .img-hero img {
+        width: 250px;
+    }
+
+    .especialidades-box,
+    .project-card {
+        flex-basis: 100%;
+        padding: 25px;
+    }
+
+    .especialidades-box i {
+        font-size: 3rem;
+    }
+
+    .especialidades-box h3,
+    .project-card h3 {
+        font-size: 1.45rem;
+    }
+
+    .section-subtitle {
+        max-width: 100%;
+        font-size: 0.92rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .interface {
+        padding: 0 6%;
+    }
+
+    header .logo img {
+        height: 30px;
+    }
+
+    .contact-links {
+        gap: 10px;
+    }
+
+    .social-link i {
+        font-size: 1.4rem;
+    }
+
+    .txt-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .img-hero img {
+        width: 200px;
+    }
+
+    .project-card,
+    .especialidades-box {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-tags {
+        font-size: 0.88rem;
+    }
+
+    .project-tech li {
+        padding-left: 16px;
+    }
+}
