@@ -28,21 +28,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ===== TOGGLE EMBEDDED PROJECTS ===== */
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.querySelector('.toggle-embedded');
-    const projectsGrid = document.querySelector('.projects-grid.collapsed');
+    const toggleButtons = document.querySelectorAll('.toggle-embedded');
 
-    if (toggleBtn && projectsGrid) {
-        toggleBtn.addEventListener('click', () => {
-            projectsGrid.classList.toggle('open');
-            toggleBtn.classList.toggle('open');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const group = button.getAttribute('data-group');
             
-            if (projectsGrid.classList.contains('open')) {
-                toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Ocultar experiência em sistemas embarcados';
-            } else {
-                toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Mostrar experiência em sistemas embarcados';
+            // Encontrar o projects-grid correspondente
+            const projectsGroup = button.closest('.projects-group');
+            const projectsGrid = projectsGroup.querySelector('.projects-grid.collapsed');
+
+            if (projectsGrid) {
+                projectsGrid.classList.toggle('open');
+                button.classList.toggle('open');
+                
+                if (projectsGrid.classList.contains('open')) {
+                    if (group === 'backend') {
+                        button.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Ocultar experiência em desenvolvimento web';
+                    } else if (group === 'embedded') {
+                        button.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Ocultar sistemas distribuídos e embarcados';
+                    }
+                } else {
+                    if (group === 'backend') {
+                        button.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Mostrar experiência em desenvolvimento web';
+                    } else if (group === 'embedded') {
+                        button.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Mostrar sistemas distribuídos e embarcados';
+                    }
+                }
             }
         });
-    }
+    });
 });
 
 /* ===== SMOOTH SCROLL BEHAVIOR ===== */
