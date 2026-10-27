@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/fonts/ibm-plex-sans.css">
   <link rel="stylesheet" href="style.css?v=3">
-  <script src="translations.js?v=3" defer></script>
+  <script src="translations.js?v=4" defer></script>
   <script src="preferences.js?v=3" defer></script>
   <script src="script.js?v=3" defer></script>
   <title>Felipe Feitosa | Engenheiro de Dados</title>
@@ -103,13 +103,14 @@
         <div class="project-content">
           <div class="project-category"><svg class="icon " aria-hidden="true" focusable="false"><use href="#ph-database"></use></svg> Engenharia de dados<span class="recent-label">Mais recente</span></div>
           <h3>SQL Data Warehouse</h3>
-          <p>Data warehouse em SQL Server para integrar dados de CRM e ERP. Inclui ingestão de arquivos CSV, limpeza, validação de qualidade e modelagem dimensional.</p>
-          <ul class="tags" aria-label="Tecnologias"><li>SQL Server</li><li>ETL</li><li>Medallion</li><li>Star Schema</li></ul>
+          <p>Data warehouse em SQL Server para integrar dados de CRM e ERP, com ingestão, limpeza, validação e modelagem dimensional. A camada Gold alimenta um dashboard de vendas no Power BI, com modelo semântico, medidas DAX e filtros interativos.</p>
+          <ul class="tags" aria-label="Tecnologias"><li>SQL Server</li><li>ETL</li><li>Medallion</li><li>Star Schema</li><li>Power BI</li><li>DAX</li></ul>
           <details class="technical-details"><summary>Detalhes técnicos <svg class="icon " aria-hidden="true" focusable="false"><use href="#ph-caret-down"></use></svg></summary>
-            <div><ul><li>Bronze: carregamento dos dados originais de CRM e ERP.</li><li>Silver: limpeza, padronização, tratamento de duplicatas e integração.</li><li>Gold: fatos de vendas e dimensões de clientes e produtos.</li><li>Testes de qualidade, catálogo de dados e documentação da arquitetura.</li></ul><p>Desenvolvido no curso Data With Baraa. Concluí a implementação e refatorei a organização e a documentação do repositório. O escopo utiliza o conjunto de dados mais recente, sem rastreamento histórico.</p></div>
+            <div><ul><li>Bronze: carregamento dos dados originais de CRM e ERP.</li><li>Silver: limpeza, padronização, tratamento de duplicatas e integração.</li><li>Gold: fatos de vendas e dimensões de clientes e produtos.</li><li>Testes de qualidade, catálogo de dados e documentação da arquitetura.</li><li>Power BI: modelo semântico a partir de gold.dim_customers, gold.dim_products e gold.fact_sales, com uma dimensão de datas criada no Power BI.</li><li>Medidas DAX para vendas, pedidos, clientes e ticket médio; análises por período, categoria, produto e país.</li><li>Dashboard publicado no Power BI Service, com filtros interativos de ano, categoria e país.</li></ul><p>Desenvolvido a partir do curso Data With Baraa. Concluí a implementação, refatorei a organização e a documentação e estendi o projeto com uma camada analítica em Power BI. O escopo utiliza o conjunto de dados mais recente, sem rastreamento histórico.</p></div>
           </details>
           <p class="course-credit">Projeto de estudo · Data With Baraa</p>
           <a class="repo-link" href="https://github.com/felipeft/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer">Ver repositório<svg class="icon " aria-hidden="true" focusable="false"><use href="#ph-github-logo"></use></svg></a>
+          <div><a class="repo-link dashboard-link" href="https://app.powerbi.com/view?r=eyJrIjoiOGFkNjQ2ZDctOWE3Ni00MGI2LWJmYWMtYmJiOTZhNzRlYTU3IiwidCI6ImQzOGYwZDk4LWNhZjMtNDMwOS04YzY3LTllNGViNzY3ZTkwYyJ9" target="_blank" rel="noopener noreferrer">Ver dashboard no Power BI<svg class="icon" aria-hidden="true" focusable="false"><use href="#ph-chart-bar"></use></svg></a></div>
         </div>
       </article>
       <article class="project-card" data-category="engineering">

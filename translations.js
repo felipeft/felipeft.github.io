@@ -28,13 +28,11 @@ const englishCopy = {
   "Ampliar": "Enlarge",
   "Arquitetura documentada no repositório": "Architecture documented in the repository",
   "Mais recente": "Latest",
-  "Data warehouse em SQL Server para integrar dados de CRM e ERP. Inclui ingestão de arquivos CSV, limpeza, validação de qualidade e modelagem dimensional.": "SQL Server data warehouse integrating CRM and ERP data. Includes CSV ingestion, cleaning, quality checks and dimensional modelling.",
   "Detalhes técnicos": "Technical details",
   "Bronze: carregamento dos dados originais de CRM e ERP.": "Bronze: loading the original CRM and ERP data.",
   "Silver: limpeza, padronização, tratamento de duplicatas e integração.": "Silver: cleaning, standardisation, deduplication and integration.",
   "Gold: fatos de vendas e dimensões de clientes e produtos.": "Gold: sales facts and customer and product dimensions.",
   "Testes de qualidade, catálogo de dados e documentação da arquitetura.": "Quality tests, data catalogue and architecture documentation.",
-  "Desenvolvido no curso Data With Baraa. Concluí a implementação e refatorei a organização e a documentação do repositório. O escopo utiliza o conjunto de dados mais recente, sem rastreamento histórico.": "Developed during the Data With Baraa course. I completed the implementation and refactored the repository structure and documentation. The scope uses the latest dataset, without historical tracking.",
   "Projeto de estudo · Data With Baraa": "Learning project · Data With Baraa",
   "Ver repositório": "View repository",
   "Fluxo de extração, transformação e análise": "Extraction, transformation and analysis workflow",
@@ -109,5 +107,11 @@ const englishCopy = {
   "Fluxo do projeto: extração da API para JSON, transformação com Pandas para CSV e análise": "Project workflow: API extraction to JSON, transformation to CSV with Pandas and analysis",
   "Screenshot do aplicativo Streamlit Analisador de Vendas da Olist com formulário de pedido e previsão de entrega": "Screenshot of the Olist sales analysis Streamlit application with an order form and delivery prediction",
   "Screenshot do dashboard NBA Stat Predictor com previsões de pontos, assistências e rebotes de um jogador": "Screenshot of the NBA Stat Predictor dashboard with a player's predicted points, assists and rebounds",
-  "Gráficos do TCC comparando sinais elétricos no domínio do tempo e espectros FFT de cargas lineares e não lineares": "Thesis charts comparing time-domain electrical signals and FFT spectra of linear and non-linear loads"
+  "Gráficos do TCC comparando sinais elétricos no domínio do tempo e espectros FFT de cargas lineares e não lineares": "Thesis charts comparing time-domain electrical signals and FFT spectra of linear and non-linear loads",
+  "Data warehouse em SQL Server para integrar dados de CRM e ERP, com ingestão, limpeza, validação e modelagem dimensional. A camada Gold alimenta um dashboard de vendas no Power BI, com modelo semântico, medidas DAX e filtros interativos.": "SQL Server data warehouse integrating CRM and ERP data through ingestion, cleaning, validation and dimensional modelling. The Gold layer feeds a Power BI sales dashboard with a semantic model, DAX measures and interactive filters.",
+  "Desenvolvido a partir do curso Data With Baraa. Concluí a implementação, refatorei a organização e a documentação e estendi o projeto com uma camada analítica em Power BI. O escopo utiliza o conjunto de dados mais recente, sem rastreamento histórico.": "Developed from the Data With Baraa course. I completed the implementation, refactored the structure and documentation, and extended the project with a Power BI analytical layer. The scope uses the latest dataset, without historical tracking.",
+  "Power BI: modelo semântico a partir de gold.dim_customers, gold.dim_products e gold.fact_sales, com uma dimensão de datas criada no Power BI.": "Power BI: semantic model built from gold.dim_customers, gold.dim_products and gold.fact_sales, with a date dimension created in Power BI.",
+  "Medidas DAX para vendas, pedidos, clientes e ticket médio; análises por período, categoria, produto e país.": "DAX measures for sales, orders, customers and average order value; analysis by period, category, product and country.",
+  "Dashboard publicado no Power BI Service, com filtros interativos de ano, categoria e país.": "Dashboard published on Power BI Service, with interactive year, category and country filters.",
+  "Ver dashboard no Power BI": "View Power BI dashboard"
 };
